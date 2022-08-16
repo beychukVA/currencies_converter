@@ -1,0 +1,20 @@
+@import "../utils/variables";
+
+.container {
+  margin: 0 auto;
+  margin-top: 60px;
+  background-color: $background-color;
+
+  @media screen and (min-width: $mobile) {
+    min-width: 360px;
+  }
+  @media screen and (min-width: $tablet) {
+    min-width: 768px;
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 1024px;
+  }
+  @media screen and (min-width: $desktop2560) {
+    width: 1170px;
+  }
+}

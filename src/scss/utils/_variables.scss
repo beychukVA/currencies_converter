@@ -1,0 +1,27 @@
+$prymary-color: #f4e041;
+$secondary-color: #00bdd3;
+$background-color: #ffffff;
+$component-background-color: #f8f8f8;
+$button-primary-color: #f4e041;
+$button-secondary-color: #ffe302;
+$button-disabled-color: #b4b4b4;
+$button-border-black: #000000;
+$button-background-color-gray: #d0cfcf;
+$background-header: #ffffff;
+$background-card-color: #ffffff;
+$text-color-white: #ffffff;
+$text-color-black: #000000;
+$input-border-color: #d0cfcf;
+$input-label-color: #7e7e7e;
+$error-color: #cb3d40;
+
+$hero-linear-gradient: linear-gradient(
+  0deg,
+  rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)
+);
+
+$mobile: 360px; //360 -767 - mobile
+$tablet: 768px; //768 -1023 - tablet
+$desktop: 1024px; // 1024 - ... - desktop
+$desktop2560: 2560px; // 2560 - ... - desktop

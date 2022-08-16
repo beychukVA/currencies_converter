@@ -1,0 +1,11 @@
+@import "../../scss/utils/variables";
+
+.container {
+  width: 100%;
+
+  .table_cell {
+    @media screen and (min-width: $desktop2560) {
+      font-size: 25px;
+    }
+  }
+}
