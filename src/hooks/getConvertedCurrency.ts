@@ -17,20 +17,24 @@ const getConvertedCurrency = (currencies: ICurrency[]) => {
         (currency: ICurrency) => currency.ccy === toCurrency.toUpperCase()
       );
 
-      let result = "";
+      if (from && to) {
+        let result = "";
 
-      if (from?.ccy === to?.ccy) {
-        result = `${count.toFixed(8)} ${to?.ccy}`;
-        return result;
+        if (from?.ccy === to?.ccy) {
+          result = `${count.toFixed(8)} ${to?.ccy}`;
+          return result;
+        }
+
+        result =
+          from.ccy === "UAH"
+            ? (count / Number(to?.buy)).toFixed(8).toString()
+            : ((Number(from?.buy) / Number(to.buy)) * count)
+                .toFixed(8)
+                .toString();
+        return `${result} ${to?.ccy}`;
+      } else {
+        return "Something went wrong :( Check your request...";
       }
-
-      result =
-        from.ccy === "UAH"
-          ? (count / Number(to?.buy)).toFixed(8).toString()
-          : ((Number(from?.buy) / Number(to.buy)) * count)
-              .toFixed(8)
-              .toString();
-      return `${result} ${to?.ccy}`;
     }
   };
 
