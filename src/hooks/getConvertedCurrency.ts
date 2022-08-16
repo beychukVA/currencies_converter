@@ -8,6 +8,7 @@ const getConvertedCurrency = (currencies: ICurrency[]) => {
     buy: "1",
     sale: "1",
   });
+
   const convert = (count: number, fromCurrency: string, toCurrency: string) => {
     if (fromCurrency && toCurrency) {
       const [from] = tmpCurrencies.filter(
