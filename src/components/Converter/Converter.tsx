@@ -19,7 +19,7 @@ const Converter: React.FC<IProps> = () => {
   const { convert } = getConvertedCurrency(currencies);
 
   const queryRegex = useMemo(
-    () => /^$|("|”|“)\d+\s\S\S\S("|”|“)\sin\s("|”|“)\S\S\S("|”|“)$/,
+    () => /^$|("|”|“)\d+\s\w{3}("|”|“)\sin\s("|”|“)\w{3}("|”|“)$/,
     []
   );
 
