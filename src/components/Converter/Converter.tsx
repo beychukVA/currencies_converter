@@ -37,8 +37,13 @@ const Converter: React.FC<IProps> = () => {
       setErrorMessage("example: “15 usd” in “uah”");
       setIsError(false);
       const [count, fromCurrency, _, toCurrency] = text
-        .replace(/["]/g, "")
+        .replace(/[^\s\w\d]/g, "")
         .split(" ");
+
+      console.log("Count: ", count);
+      console.log("From: ", fromCurrency);
+      console.log("To: ", toCurrency);
+
       if (fromCurrency && toCurrency) {
         setCount(Number(count));
         setFrom(fromCurrency);
