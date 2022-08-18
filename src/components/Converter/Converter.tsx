@@ -40,10 +40,6 @@ const Converter: React.FC<IProps> = () => {
         .replace(/[^\s\w\d]/g, "")
         .split(" ");
 
-      console.log("Count: ", count);
-      console.log("From: ", fromCurrency);
-      console.log("To: ", toCurrency);
-
       if (fromCurrency && toCurrency) {
         setCount(Number(count));
         setFrom(fromCurrency);
