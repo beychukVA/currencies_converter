@@ -66,7 +66,7 @@ const Converter: React.FC<IProps> = () => {
       />
 
       {convertedCurrancy && (
-        <span className={styles.result}>{convertedCurrancy}</span>
+        <span className={styles.result}>{!isError && convertedCurrancy}</span>
       )}
     </div>
   );
