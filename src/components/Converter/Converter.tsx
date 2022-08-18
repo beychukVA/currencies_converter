@@ -18,7 +18,10 @@ const Converter: React.FC<IProps> = () => {
 
   const { convert } = getConvertedCurrency(currencies);
 
-  const queryRegex = useMemo(() => /^$|^.\d+\s\S\S\S.\sin\s.\S\S\S.$/, []);
+  const queryRegex = useMemo(
+    () => /^$|["]|[”]{1}\d+\s\S\S\S["]|[”]{1}\sin\s["]|[”]{1}\S\S\S["]|[”]{1}$/,
+    []
+  );
 
   const convertedCurrancy = useMemo(
     () => convert(count, from, to),
